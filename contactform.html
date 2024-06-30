@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUS</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="Lamborghini_Logo.svg" alt="Logo" class="logo">
+                <span class="site-name">Lamborghini</span>
+            </div>
+            <div class="contact-details">
+                <span>Email: contact@site.com</span>
+                <span>Phone: (123) 456-7890</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="paragraph">
+            <p>Welcome to Lamborghini News, the premier source for the latest updates, innovations, and stories from the
+                world of Lamborghini. By subscribing to our site, you will receive exclusive access to in-depth
+                articles, behind-the-scenes insights, and the latest announcements from the iconic Italian automotive
+                brand. Stay ahead of the curve with news about our cutting-edge designs, groundbreaking technologies,
+                and thrilling motorsport victories. Whether you're a passionate Lamborghini enthusiast or a curious
+                automotive aficionado, our content will fuel your love for luxury, performance, and excellence.
+                Subscribe today to immerse yourself in the captivating world of Lamborghini and never miss a moment of
+                our exhilarating journey.
+            </p>
+        </div>
+        <div>
+            <div class="contact-form">
+                <h3 class=" middle">Contact Us </h3>
+                <form action="javascript: submitForm()" onSubmit="return validate()">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Dambarudhar Sahoo" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Dambarudhar@gmail.com" required><br><br>
+                    <label for="genre">Genre:</label>
+                    <input list="genres" name="genre" id="genre" placeholder="choose from drop down list" required>
+                    <datalist id="genres">
+                        <option value="Poetry"></option>
+                        <option value="Fiction"></option>
+                        <option value="Non-fiction"></option>
+                        <option value="Drama"></option>
+                        <option value="Prose"></option>
+                        <option value="Others"></option>
+                    </datalist><br><br>
+                    <input type="checkbox" name="msg" id="msg" required>
+                    <label for="msg">SUBSCRIBE TO OUR NEWSLETTER VIA EMAIL</label><br>
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                </form>
+            </div>
+            <script>
+
+                function validate() {
+                    let ele1 = document.getElementById("name");
+                    let ele2 = document.getElementById("email");
+                    if (ele1.value.length < 9) {
+                        window.alert("Name length must be greater than 9 characters");
+                        return false;
+                    }
+                    return true;
+                }
+                function submitForm() {
+                    let ele1 = document.getElementById("name");
+                    let ele2 = document.getElementById("email");
+                    window.alert("Hi!! " + ele1.value + " \n Thank you for Contacting Us. \n Our team will Contact you on this :" + ele2.value);
+                    <!-- window.alert("hii"); -->
+                }
+
+            </script>
+        </div>
+    </main>
+    <footer class="header-container">
+        <p class="text2">&copy;All rights reserved</p>
+    </footer>
+</body>
+
+</html>
